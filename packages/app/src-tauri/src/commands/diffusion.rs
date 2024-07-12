@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use kalosm_vision::{Wuerstchen, WuerstchenInferenceSettings};
+use kalosm::vision::{Wuerstchen, WuerstchenInferenceSettings};
 use serde::Deserialize;
 use tauri::AppHandle;
 use tauri_plugin_channel::Channel;

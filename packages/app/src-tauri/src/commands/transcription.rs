@@ -4,7 +4,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use kalosm_sound::{rodio::Decoder, Whisper, WhisperLanguage, WhisperSource};
+use kalosm::audio::{rodio::Decoder, Whisper, WhisperLanguage, WhisperSource};
 use serde::Deserialize;
 use serde_with::{serde_as, DisplayFromStr};
 use tauri::AppHandle;
@@ -130,10 +130,10 @@ mod test {
     #[ignore]
     #[tokio::test(flavor = "multi_thread")]
     async fn simple_transcription_test() {
-        let model = kalosm_sound::WhisperSource::Base;
+        let model = kalosm::audio::WhisperSource::Base;
         let conf = WhisperConf {
             audio_path: PathBuf::from(test_file!("gitbar_189_110_secs.mp3")),
-            language: kalosm_sound::WhisperLanguage::Italian,
+            language: kalosm::audio::WhisperLanguage::Italian,
             model: model,
         };
 

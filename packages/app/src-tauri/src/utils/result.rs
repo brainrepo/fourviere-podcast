@@ -26,7 +26,7 @@ pub enum Error {
     #[error("Task aborted before completion")]
     Aborted,
     #[error("Error while decoding audio file")]
-    Decoder(#[from] kalosm_sound::rodio::decoder::DecoderError),
+    Decoder(#[from] kalosm::audio::rodio::decoder::DecoderError),
     #[error("Whisper instantation failed")]
     Whisper,
     #[error("Wuerstchen instantation failed")]

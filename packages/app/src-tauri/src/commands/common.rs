@@ -5,7 +5,7 @@ use std::{
 
 use derive_new::new;
 use getset::Getters;
-use kalosm_sound::ModelLoadingProgress;
+use kalosm::audio::ModelLoadingProgress;
 use serde::{Deserialize, Deserializer, Serialize};
 use tauri::AppHandle;
 use tauri_plugin_channel::{channel, Channel};
